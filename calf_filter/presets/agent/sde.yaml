@@ -1,0 +1,11 @@
+_target_: goalagent.agent.AgentSDE
+
+envs:
+  _target_: goalagent.env.make_vector_env
+  env: ~ env
+  num_envs: $ num_envs
+init_log_std: 0.0
+n_hidden_neurons: 64
+origin: $ env_spec.origin
+critic_infinitesimal: False
+pos_def_penalty_coeff: null

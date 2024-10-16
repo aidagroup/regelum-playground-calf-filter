@@ -1,0 +1,20 @@
+observations_names:
+  - "x"
+  - "y"
+  - "v_x"
+  - "v_y"
+  - "angle"
+  - "angle_vel"
+  - "on_ground_left"
+  - "on_ground_right"
+
+actions_names:
+  - "F_side"
+  - "F_vert"
+
+
+nominal_policy:
+  _target_: goalagent.env.lunar_lander.LunarLanderStabilizingPolicy
+
+
+checkpoint_path: lunar_lander

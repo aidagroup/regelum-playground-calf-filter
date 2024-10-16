@@ -1,0 +1,19 @@
+observations_names:
+  - "x"
+  - "y"
+  - "angle"
+
+
+actions_names:
+  - "vel"
+  - "angle_vel"
+
+
+# nominal_policy:
+#   _target_: goalagent.env.robot_kin.LunarLanderStabilizingPolicy
+
+# observer:
+#   _target_: goalagent.env.lunar_lander.LunarLanderObserver
+
+
+# checkpoint_path: lunar_lander

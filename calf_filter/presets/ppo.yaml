@@ -1,0 +1,73 @@
+defaults:
+  - env: pendulum-v1
+  - env_spec: ${env}
+  - agent: default
+
+exp_name: ppo
+# """the name of this experiment"""
+seed: 1
+# """seed of the experiment"""
+torch_deterministic: True
+# """if toggled, `torch.backends.cudnn.deterministic=False`"""
+cuda: True
+# """if toggled, cuda will be enabled by default"""
+
+# """the id of the environment"""
+total_timesteps: 1000000
+# """total timesteps of the experiments"""
+learning_rate: 3e-4
+# """the learning rate of the optimizer"""
+num_envs: 1
+# """the number of parallel game environments"""
+num_steps: 2048
+# """the number of steps to run in each environment per policy rollout"""
+anneal_lr: True
+# """Toggle learning rate annealing for policy and value networks"""
+gamma: 0.99
+# """the discount factor gamma"""
+gae_lambda: 0.95
+# """the lambda for the general advantage estimation"""
+num_minibatches: 32
+# """the number of mini-batches"""
+update_epochs: 10
+# """the K epochs to update the policy"""
+norm_adv: True
+# """Toggles advantages normalization"""
+clip_coef: 0.2
+# """the surrogate clipping coefficient"""
+clip_vloss: True
+# """Toggles whether or not to use a clipped loss for the value function, as per the paper."""
+ent_coef: 0.0
+# """coefficient of the entropy"""
+vf_coef:  0.5
+# """coefficient of the value function"""
+max_grad_norm: 0.5
+# """the maximum norm for the gradient clipping"""
+target_kl:  null
+# """the target KL divergence threshold"""
+
+# to be filled in runtime
+batch_size: 0
+# """the batch size (computed in runtime)"""
+minibatch_size: 0
+# """the mini-batch size (computed in runtime)"""
+num_iterations: 0
+# """the number of iterations (computed in runtime)"""
+is_load_checkpoint: False
+
+init_log_std: 0.
+
+is_calf_filter_on: False
+transform_logprobs: True
+safe_decay_parameter: 0.01
+is_dynamic_decay_rate: True
+decay_penalty_coef: 1.
+p: 0.
+is_p_learnable: False
+nominal_std: 0.01
+
+sde_sample_freq: 4
+
+rehydra:
+  sweep:
+    dir: ${oc.env:REGELUM_DATA_DIR}/outputs/${now:%Y-%m-%d}/${now:%H-%M-%S}

@@ -293,3 +293,24 @@ Replace `<system_name>` with the desired system, e.g., `lunar_lander`, `3wrobot_
         - [`casadi.yaml`](./presets/simulator/casadi.yaml): Configurations for the [CasADi](https://web.casadi.org/) [RK](https://en.wikipedia.org/wiki/Runge%E2%80%93Kutta_methods) simulator.
 
 
+@misc{regelum-playground2024,
+author =   {Pavel Osinenko, Grigory Yaremenko, Georgiy Malaniya, Anton Bolychev},
+title =    {Regelum-Playground: A set of examples based on the Regelum-Control package},
+howpublished = {\url{https://github.com/osinekop/regelum-playground}},
+year = {2024},
+note = {Licensed under the MIT License}
+}
+
+## Citation
+
+If you use this project in your research or work, please cite it as:
+
+```bibtex
+@misc{regelum-playground2024,
+  author       = {Pavel Osinenko and Grigory Yaremenko and Georgiy Malaniya and Anton Bolychev},
+  title        = {Regelum-Playground: A set of examples based on the Regelum-Control package},
+  howpublished = {\url{https://github.com/osinekop/regelum-playground}},
+  year         = {2024},
+  note         = {Licensed under the MIT License}
+}
+```
