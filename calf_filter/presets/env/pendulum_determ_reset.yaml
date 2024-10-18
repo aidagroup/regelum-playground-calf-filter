@@ -1,0 +1,10 @@
+_target_: goalagent.env.rg_env.RgEnv
+
+simulator:
+  _target_: goalagent.env.utils.random_state_simulator.StateInitRandomSamplerSimulator
+  system: 
+    _target_: goalagent.env.pendulum.QuanserInvertedPendulum
+  time_final: 10
+  max_step: 0.05
+running_objective:
+  _target_: goalagent.env.running_objective.GymPendulumRunningObjective

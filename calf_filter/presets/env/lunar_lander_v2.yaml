@@ -1,0 +1,4 @@
+_target_: gymnasium.make
+
+id: "LunarLander-v2"
+continuous: True
